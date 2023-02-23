@@ -1,0 +1,27 @@
+#1 created store database
+
+create table store (id integer primary key, name text, quantity integer, price integer, popularity integer);
+
+insert into store values (1, "hat",2,10.50,8);
+insert into store values (2, "glasses", 5, 11, 9);
+insert into store values (3, "necklace",10, 20, 7);
+insert into store values (4, "T_shirt", 8, 25, 10);
+insert into store values (5, "hoodie", 5, 35, 11);
+insert into store values (6, "bathingsuit", 6, 20,12);
+insert into store values (7, "shorts", 15, 22, 10);
+insert into store values (8, "pants", 22, 40, 13);
+insert into store values (9, "shoes", 5, 24, 7);
+insert into store values (10, "watch", 3, 100, 15);
+insert into store values (11, "ring", 10, 13, 7);
+insert into store values (12, "bracelet", 5, 11, 9);
+insert into store values (13, "winter_hat", 22, 15, 10);
+insert into store values (14, "heel", 13, 35, 11);
+insert into store values (15, "longsleeve_shirt", 8,25,10);
+
+#2 order items by price
+
+select * from store where price order by price asc;
+
+#3 select most popular items
+
+select MAX(popularity) from store
